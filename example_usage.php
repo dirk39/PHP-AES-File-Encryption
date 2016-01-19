@@ -1,13 +1,14 @@
 <?php
 
+
+//Include an AES256 Implementation
+require_once 'aes256'.DIRECTORY_SEPARATOR.'AES256Implementation.php';
+require_once 'aes256'.DIRECTORY_SEPARATOR.'MCryptAES256Implementation.php';
 //Include the library
 require_once 'AESCryptFileLib.php';
 
-//Include an AES256 Implementation
-require_once 'aes256/MCryptAES256Implementation.php';
-
 //Construct the implementation
-$mcrypt = new MCryptAES256Implementation();
+$mcrypt = new aes256\MCryptAES256Implementation();
 
 //Use this to instantiate the encryption library class
 $lib = new AESCryptFileLib($mcrypt);
