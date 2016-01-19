@@ -4,6 +4,8 @@
  * for the file format used.
  * 
  */
+
+
 class AESCryptFileLib
 {
 	const ENCRYPTED_FILE_EXTENSION = "aes";
@@ -18,7 +20,7 @@ class AESCryptFileLib
 	
 	private $debugging = false;
 	
-	public function __construct(AES256Implementation $aes_impl, $use_dynamic_filenaming = true) {
+	public function __construct(aes256\AES256Implementation $aes_impl, $use_dynamic_filenaming = true) {
 		$this->aes_impl = $aes_impl;
 		$this->use_dynamic_filenaming = $use_dynamic_filenaming;
 		

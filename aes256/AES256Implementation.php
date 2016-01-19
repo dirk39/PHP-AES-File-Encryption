@@ -1,5 +1,7 @@
 <?php
 
+namespace aes256;
+
 interface AES256Implementation
 {
 	public function checkDependencies();
